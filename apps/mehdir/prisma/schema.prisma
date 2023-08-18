@@ -17,3 +17,12 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Version {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  slug      String?
+  title     String?
+  updatedAt DateTime @updatedAt
+  v         String?
+}
